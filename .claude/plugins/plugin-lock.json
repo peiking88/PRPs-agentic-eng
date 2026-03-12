@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-03-12T19:25:00Z",
+  "plugins": {
+    "prp-framework": {
+      "version": "1.0.0",
+      "source": "https://bgithub.xyz/codebuddy/prp-framework",
+      "installed": "2026-03-12T19:25:00Z",
+      "dependencies": {}
+    }
+  }
+}

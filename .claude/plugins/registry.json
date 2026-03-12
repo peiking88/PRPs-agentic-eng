@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-03-12T19:15:00Z",
+  "source": "https://bgithub.xyz/codebuddy/plugins-registry",
+  "plugins": {
+    "prp-framework": {
+      "name": "prp-framework",
+      "version": "1.0.0",
+      "description": "Product Requirements Prompts framework for AI-assisted development with structured workflows, validation loops, and autonomous execution",
+      "repository": "https://bgithub.xyz/codebuddy/prp-framework",
+      "author": "PRP Team",
+      "license": "MIT",
+      "keywords": ["prp", "prd", "planning", "implementation", "validation", "autonomous"],
+      "minCodebuddyVersion": "1.0.0",
+      "dependencies": {},
+      "category": "productivity",
+      "tags": ["workflow", "automation", "development"]
+    }
+  },
+  "categories": {
+    "productivity": ["prp-framework"],
+    "development": ["prp-framework"],
+    "workflow": ["prp-framework"]
+  }
+}

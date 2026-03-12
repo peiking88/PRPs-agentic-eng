@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Codebuddy Plugin Metadata",
+  "description": "Schema for Codebuddy plugin.json metadata file",
+  "type": "object",
+  "required": ["name", "version", "description"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "minLength": 2,
+      "maxLength": 64,
+      "description": "Unique plugin identifier in kebab-case (lowercase letters, numbers, hyphens)"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-z0-9.]+)?(\\+[a-z0-9.]+)?$",
+      "description": "Semantic version (MAJOR.MINOR.PATCH with optional prerelease/build metadata)"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 500,
+      "description": "Plugin description for discovery (10-500 characters)"
+    },
+    "author": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "Plugin author or organization"
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX license identifier (e.g., MIT, Apache-2.0, ISC)"
+    },
+    "minCodebuddyVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Minimum Codebuddy version required (semver)"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "minItems": 1,
+      "maxItems": 20,
+      "description": "Keywords for plugin discovery"
+    },
+    "repository": {
+      "type": "string",
+      "format": "uri",
+      "description": "Source repository URL"
+    },
+    "homepage": {
+      "type": "string",
+      "format": "uri",
+      "description": "Plugin homepage URL"
+    },
+    "bugs": {
+      "type": "string",
+      "format": "uri",
+      "description": "Issue tracker URL"
+    },
+    "dependencies": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "description": "Version constraint (semver range)"
+      },
+      "description": "Other plugins required by this plugin"
+    },
+    "configSchema": {
+      "type": "object",
+      "description": "JSON Schema for plugin configuration options",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["string", "integer", "boolean", "array", "object"],
+            "description": "Value type"
+          },
+          "default": {
+            "description": "Default value"
+          },
+          "description": {
+            "type": "string",
+            "description": "Setting description"
+          },
+          "minimum": {
+            "type": "integer",
+            "description": "Minimum value for integer type"
+          },
+          "maximum": {
+            "type": "integer",
+            "description": "Maximum value for integer type"
+          },
+          "enum": {
+            "type": "array",
+            "description": "Allowed values"
+          }
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Files and directories to include in distribution"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,53 @@
+{
+  "name": "prp-framework",
+  "version": "1.0.0",
+  "description": "Product Requirements Prompts framework for AI-assisted development with structured workflows, validation loops, and autonomous execution",
+  "author": "PRP Team",
+  "license": "MIT",
+  "minCodebuddyVersion": "1.0.0",
+  "keywords": [
+    "prp",
+    "prd",
+    "planning",
+    "implementation",
+    "validation",
+    "autonomous",
+    "workflow",
+    "product-requirements"
+  ],
+  "repository": "https://github.com/user/prp-framework",
+  "dependencies": {},
+  "configSchema": {
+    "artifactsPath": {
+      "type": "string",
+      "default": ".claude/PRPs/",
+      "description": "Path to store PRP artifacts (PRDs, plans, reports)"
+    },
+    "maxIterations": {
+      "type": "integer",
+      "default": 20,
+      "minimum": 1,
+      "maximum": 100,
+      "description": "Maximum iterations for Ralph autonomous loop"
+    },
+    "validationLevels": {
+      "type": "integer",
+      "default": 3,
+      "minimum": 1,
+      "maximum": 6,
+      "description": "Number of validation levels to run (1-6)"
+    },
+    "autoArchive": {
+      "type": "boolean",
+      "default": true,
+      "description": "Automatically archive completed plans to completed/ folder"
+    }
+  },
+  "files": [
+    "SKILL.md",
+    "plugin.json",
+    "skills/",
+    "agents/",
+    "templates/"
+  ]
+}

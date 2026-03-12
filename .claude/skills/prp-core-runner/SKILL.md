@@ -1,6 +1,7 @@
 ---
 name: prp-core-runner
-description: Orchestrate complete PRP workflow from feature request to pull request. Run create branch, create PRP, execute implementation, commit changes, and create PR in sequence. Use when implementing features using PRP methodology or when user requests full PRP workflow.
+version: 1.0.0
+description: Orchestrate complete PRP workflow from feature request to pull request. Run create branch, create PRP, execute implementation, commit changes, and create PR in sequence. Use when implementing features using PRP methodology or when user requests full PRP workflow. Do NOT use for single PRP commands, simple changes, or when user wants step-by-step control - use individual prp-prd, prp-plan, or prp-implement skills instead.
 ---
 
 # PRP Core Workflow Runner
