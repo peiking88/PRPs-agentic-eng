@@ -15,11 +15,24 @@
       "dependencies": {},
       "category": "productivity",
       "tags": ["workflow", "automation", "development"]
+    },
+    "prp-core": {
+      "name": "prp-core",
+      "version": "2.4.0",
+      "description": "Complete PRP workflow automation - plan, implement, debug, review, commit, and PR commands with specialized agents",
+      "repository": "https://bgithub.xyz/peiking88/PRPs-agentic-eng",
+      "author": "Wirasm",
+      "license": "MIT",
+      "keywords": ["prp", "prd", "planning", "implementation", "review", "commit", "pr"],
+      "minCodebuddyVersion": "1.0.0",
+      "dependencies": {},
+      "category": "productivity",
+      "tags": ["workflow", "automation", "development", "git"]
     }
   },
   "categories": {
-    "productivity": ["prp-framework"],
-    "development": ["prp-framework"],
-    "workflow": ["prp-framework"]
+    "productivity": ["prp-framework", "prp-core"],
+    "development": ["prp-framework", "prp-core"],
+    "workflow": ["prp-framework", "prp-core"]
   }
 }

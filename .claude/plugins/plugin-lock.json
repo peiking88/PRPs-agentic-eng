@@ -7,6 +7,12 @@
       "source": "https://bgithub.xyz/codebuddy/prp-framework",
       "installed": "2026-03-12T19:25:00Z",
       "dependencies": {}
+    },
+    "prp-core": {
+      "version": "2.4.0",
+      "source": "https://bgithub.xyz/peiking88/PRPs-agentic-eng",
+      "installed": "2026-03-12T19:30:00Z",
+      "dependencies": {}
     }
   }
 }
